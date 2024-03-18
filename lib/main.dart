@@ -1,7 +1,10 @@
+import 'package:f_getxstate_demo/ui/controllers/count_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'ui/pages/main_page.dart';
 
 void main() {
+  Get.put(CountController());
   runApp(const MyApp());
 }
 
@@ -10,7 +13,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
         title: 'GetX Demo',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
